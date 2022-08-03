@@ -12,7 +12,7 @@ Một khung công tác back-end dựa trên Xray, hỗ trợ các giao thức V2
 # Cài đặt chính
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/CatPort/XrayR-script/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/harryngne/XrayR-script/master/install.sh)
 ```
 
 # Cài đặt Docker
@@ -27,7 +27,7 @@ curl -L "https://github.com/docker/compose/releases/download/1.26.1/docker-compo
 chmod +x /usr/local/bin/docker-compose
 ```
 
-1. `git clone https://github.com/CatPort/XrayR-script`
+1. `git clone https://github.com/harryngne/XrayR-script`
 2. `cd XrayR-script`
 3. Chỉnh sửa cấu hình。
 Định dạng cơ bản của tệp cấu hình như sau. Có thể thêm nhiều bảng và nhiều thông tin cấu hình nút trong Nodes cùng một lúc. Chỉ cần thêm các mục Nodes ở cùng một định dạng.。
