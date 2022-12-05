@@ -109,20 +109,20 @@ install_XrayR() {
 	cd /usr/local/XrayR/
 
     if  [ $# == 0 ] ;then
-        last_version=$(curl -Ls "https://api.github.com/repos/harryngne/XrayR/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+        last_version=$(curl -Ls "https://api.github.com/repos/harryngne/XrayR-Hinet/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
         if [[ ! -n "$last_version" ]]; then
             echo -e "${red}Không thể phát hiện phiên bản XrayR, có thể đã vượt quá giới hạn API Github, vui lòng thử lại sau hoặc chỉ định phiên bản XrayR để cài đặt theo cách thủ công${plain}"
             exit 1
         fi
         echo -e "Đã phát hiện phiên bản mới nhất của XrayR：${last_version}，bắt đầu cài đặt"
-        wget -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip https://github.com/harryngne/XrayR/releases/download/${last_version}/XrayR-linux-${arch}.zip
+        wget -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip https://github.com/harryngne/XrayR-Hinet/releases/download/${last_version}/XrayR-linux-${arch}.zip
         if [[ $? -ne 0 ]]; then
             echo -e "${red}Không tải xuống được XrayR, hãy đảm bảo máy chủ của bạn có thể tải xuống tệp Github${plain}"
             exit 1
         fi
     else
         last_version=$1
-        url="https://github.com/harryngne/XrayR/releases/download/${last_version}/XrayR-linux-${arch}.zip"
+        url="https://github.com/harryngne/XrayR-Hinet/releases/download/${last_version}/XrayR-linux-${arch}.zip"
         echo -e "Bắt đầu cài đặt XrayR v$1"
         wget -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip ${url}
         if [[ $? -ne 0 ]]; then
